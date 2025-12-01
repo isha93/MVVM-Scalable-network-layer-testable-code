@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PokemonDetailView: View {
     @State var viewModel: PokemonDetailViewModel
-    let pokemonName: String // Data ringan untuk judul sebelum loading selesai
+    let pokemonName: String
     
     var body: some View {
         VStack(spacing: 24) {
@@ -37,7 +37,7 @@ struct PokemonDetailView: View {
                 .background(Color.gray.opacity(0.1))
                 .cornerRadius(8)
                 
-                Text(pokemonName) // Pakai nama dari parameter dulu biar instan
+                Text(pokemonName) 
                     .font(.largeTitle)
                     .bold()
                 

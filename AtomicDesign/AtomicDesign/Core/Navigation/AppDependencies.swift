@@ -9,7 +9,6 @@ import SwiftUI
 
 @Observable
 class AppDependencies {
-    // Factory Method untuk membuat ViewModel
     func makeListViewModel() -> PokemonListViewModel {
         return PokemonListViewModel()
     }

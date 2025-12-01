@@ -42,6 +42,6 @@ struct PokemonRow: View {
                 .foregroundStyle(.gray.opacity(0.5))
         }
         .padding(.vertical, 4)
-        .contentShape(Rectangle()) // Agar area kosong juga bisa diklik
+        .contentShape(Rectangle())
     }
 }

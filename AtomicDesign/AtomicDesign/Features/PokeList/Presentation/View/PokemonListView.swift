@@ -20,7 +20,6 @@ struct PokemonListView: View {
                     .listRowSeparator(.hidden)
             } else {
                 ForEach(viewModel.pokemons) { pokemon in
-                    // BUTTON PENGGANTI NAVIGATIONLINK
                     Button {
                         router.push(.detail(name: pokemon.name))
                     } label: {
