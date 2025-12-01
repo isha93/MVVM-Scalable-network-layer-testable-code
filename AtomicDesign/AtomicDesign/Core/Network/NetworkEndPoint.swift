@@ -50,7 +50,7 @@ extension Endpoint {
     
     var authorizationType: AuthorizationType {
         // By default, all endpoints require authorization
-        return .authorized
+        return .anonymous
     }
 
     var timeoutInterval: Double {

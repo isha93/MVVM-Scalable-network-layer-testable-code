@@ -5,20 +5,13 @@
 //  Created by Isa Nur Fajar on 2025/11/25.
 //
 
-
-enum HomeAPI {
+enum PokeListAPI {
     case getPokemonList(limit: Int, offset: Int)
-    case getPokemonDetail(name: String)
 }
 
-extension HomeAPI: Endpoint {    
+extension PokeListAPI: Endpoint {
     var path: String {
-        switch self {
-        case .getPokemonList:
-            return "pokemon"
-        case .getPokemonDetail(let name):
-            return "pokemon/\(name)"
-        }
+        return "pokemon"
     }
     
     var method: HTTPMethod {
@@ -32,9 +25,6 @@ extension HomeAPI: Endpoint {
                 "limit": limit,
                 "offset": offset
             ])
-            
-        case .getPokemonDetail:
-            return .requestPlain
         }
     }
     
