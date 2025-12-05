@@ -29,3 +29,22 @@ struct Pokemon: Codable, Identifiable {
     }
 }
 
+extension PokemonListResponse {
+    static func mock(
+        id: Int = 1,
+        name: String = "pikachu",
+        count: Int? = 1,
+        next: String? = "",
+        previous: String? = "",
+        results: [Pokemon] = []
+    ) -> PokemonListResponse {
+        return PokemonListResponse(
+            count: count ?? 0,
+            next: next ?? "",
+            previous: previous ?? "",
+            results: .init(repeating: .init(name: name, url: ""), count: count ?? 1)
+        )
+    }
+
+}
+

@@ -218,3 +218,37 @@ struct NamedAPIResource: Codable {
     let name: String
     let url: String
 }
+
+extension PokemonDetail {
+    static func mock(
+        id: Int = 1,
+        name: String = "pikachu",
+        height: Int? = 4,
+        weight: Int? = 60,
+        baseStat: Int = 90
+    ) -> PokemonDetail {
+        return PokemonDetail(
+            abilities: [],
+            baseExperience: nil,
+            cries: nil,
+            forms: nil,
+            gameIndices: nil,
+            height: height,
+            heldItems: nil,
+            id: id,
+            isDefault: nil,
+            locationAreaEncounters: nil,
+            moves: nil,
+            name: name,
+            order: nil,
+            pastAbilities: nil,
+            pastTypes: nil,
+            species: nil,
+            sprites: nil,
+            stats: [StatEntry(baseStat: baseStat, effort: 0, stat: .init(name: "hp", url: "example.com"))],
+            types: nil,
+            weight: weight
+        )
+    }
+}
+
