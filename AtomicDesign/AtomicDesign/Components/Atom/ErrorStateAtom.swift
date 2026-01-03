@@ -19,17 +19,17 @@ struct ErrorStateAtom: View {
             
             Text(message)
                 .font(AppFont.body())
-                .foregroundColor(AppColor.textSecondary)
+                .foregroundColor(AppColor.textSecondary.color)
                 .multilineTextAlignment(.center)
             
             if let retryAction = retryAction {
                 Button(action: retryAction) {
                     Text("Try Again")
                         .font(AppFont.headline())
-                        .foregroundColor(AppColor.textWhite)
+                        .foregroundColor(AppColor.textWhite.color)
                         .padding(.horizontal, AppSpacing.lg)
                         .padding(.vertical, AppSpacing.sm)
-                        .background(AppColor.primary)
+                        .background(AppColor.primary.color)
                         .cornerRadius(12)
                 }
                 .buttonStyle(.scalable)

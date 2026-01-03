@@ -26,7 +26,7 @@ struct PokemonStatsChartOrganism: View {
             .padding(.horizontal)
         }
         .padding(.vertical)
-        .background(AppColor.cardBackground)
+        .background(AppColor.cardBackground.color)
         .cornerRadius(24)
     }
 }
