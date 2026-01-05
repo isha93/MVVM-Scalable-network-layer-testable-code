@@ -12,8 +12,15 @@ class MockPokeListService: PokeListServiceProtocol {
     enum Mode { case success, failure(Error) }
     var mode: Mode = .success
     var mockResponse: PokemonListResponse?
-    
+    var callCount: Int = 0
+    var lastLimit: Int?
+    var lastOffset: Int?
+
     func fetchPokemons(limit: Int, offset: Int) async throws -> PokemonListResponse {
+        callCount += 1
+        lastLimit = limit
+        lastOffset = offset
+
         switch mode {
         case .success:
             guard let response = mockResponse else {
